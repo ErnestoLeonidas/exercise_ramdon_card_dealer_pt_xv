@@ -1,1 +1,3 @@
-# exercise_ramdon_card_dealer_pt_xv
+# Random Card Dealer in Javascript, HTML and CSS
+
+Exercise day 9
