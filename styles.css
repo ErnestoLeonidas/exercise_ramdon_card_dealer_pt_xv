@@ -30,3 +30,10 @@ body {
     transform: rotate(180deg);
   }
   
+  .color-rojo{
+    color: #ff0000;
+  }
+
+  .color-negro{
+    color: #000;
+  }
