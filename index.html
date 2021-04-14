@@ -69,7 +69,7 @@ function obtenerColor(type){
 
 var otraCarta = document.getElementById('addCard');
 otraCarta.addEventListener('click', function(e){
-  document.getElementById("otra-carta").innerHTML += addCard(randomizar(types), randomizar(numbers));
+  document.getElementById("otra-carta").innerHTML = addCard(randomizar(types), randomizar(numbers));
      /*
     Swal.fire({
       title: '¿Desea agregar otra carta?',
