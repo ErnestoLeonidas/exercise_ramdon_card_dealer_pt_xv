@@ -13,13 +13,15 @@
     <!-- <h1 class="text-center text-white pt-3">MINI BLACK-JACK</h1> -->
 
     <div class="d-flex justify-content-center align-items-center h-25 mt-5">
-      <button id="addCard" class="btn btn-warning mt-6">Agregar</button>
+      <button id="addCard" class="btn btn-warning mt-6 mr-3">Carta Ramdon</button>
+      <button id="addOther" class="btn btn-warning mt-6">Otra Carta</button>
     </div>
 
     <div class="d-flex justify-content-center align-items-center h-75 mt-5"> 
       <div id="primera-carta">
       </div>
-
+      <div id="carta-random">
+      </div>
       <div id="otra-carta">
       </div>
     </div>
@@ -45,7 +47,7 @@ function revolver() {
 
 function addCard(type, number){
 
-  let otro_numero =number;
+  let otro_numero = number;
 
   return '<div class="carta m-3">'
           +  '<div class="h-auto col-12 p-0 pl-2 texto-superior '+obtenerColor(type)+'">'+type+'</div>'
@@ -69,7 +71,7 @@ function obtenerColor(type){
 
 var otraCarta = document.getElementById('addCard');
 otraCarta.addEventListener('click', function(e){
-  document.getElementById("otra-carta").innerHTML = addCard(randomizar(types), randomizar(numbers));
+  document.getElementById("carta-random").innerHTML = addCard(randomizar(types), randomizar(numbers));
      /*
     Swal.fire({
       title: '¿Desea agregar otra carta?',
@@ -88,6 +90,12 @@ otraCarta.addEventListener('click', function(e){
       }
     })*/
 });
+
+var otraCarta = document.getElementById('addOther');
+otraCarta.addEventListener('click', function(e){
+  document.getElementById("otra-carta").innerHTML += addCard(randomizar(types), randomizar(numbers));
+});
+
 
 function valor(param) { 
   switch (param) {
